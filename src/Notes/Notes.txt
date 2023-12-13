@@ -1,0 +1,27 @@
+LinkedList is a data structure for storing a collection of items.
+
+Drawbacks of Arrays data type:
+1.  When you initialize an array object, the slots with in the array cannot be increased,
+    for eg if the size of the array is for 100 items, you cannot add 101 items
+    you will have to create a new larger array and copy all of that data over from smaller one and
+2.  if you want to insert data into a slot somewhere in the middle of the array, you cannot just tell
+    all the item to move over and make some room.
+3.  You will actually have to iterate over the array and reassign each of those items to bigger index val
+    and you can imagine all kinds of struggle to fix this
+
+
+DataStructure.linkedlist:
+You can insert data to the beginning of the list or somewhere in the middle here, and all the values
+are going to be pushed over automatically or all the way at the end of the list of items without having
+to worry about any fixed size limitation or anything like that.
+You can grow the size of the collection as much as you want.
+last node in link always has to link to null it points to null
+
+Assignment:
+I want you to create a class defination for node, keep in mind that it will have two instance variables
+One of them obviously is going to be of type int, bcz the nodes we have here in this example store int data
+and the other instance variable is going to be of type node
+its going to be a recursive data type.
+
+
+

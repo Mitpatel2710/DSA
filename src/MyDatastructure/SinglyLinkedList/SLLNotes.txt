@@ -1,0 +1,86 @@
+Node.java
+**Node Class:**
+- Think of a `Node` as a single box in a toy train. Each box can hold a number, which we call `data`.
+- Just like each train box can be connected to another box, each `Node` can be connected to another `Node`. The connection to the next box is called `next`.
+- If a `Node` doesn't have another one connected to it, it's like the last box in the train.
+
+**data Variable:**
+- The `data` variable is like the contents of the box. It can be any number we want to put inside.
+
+**next Variable:**
+- The `next` variable tells us what the next box is. If `next` is `null`, it means there is no box connected, and this is the last box in the train.
+
+**displayNode Method:**
+- The `displayNode` method is like showing a label on the box that tells us what number is inside. It prints out the `data` in the box to the screen.
+
+
+
+SinglyLinkedList.java
+**isEmpty Method:**
+- `isEmpty` is like asking if our train has an engine or not. If there's no engine (`first` is `null`), then the train is empty.
+
+**insertFirst Method:**
+- `insertFirst` lets us add a new carriage at the very front of the train.
+- We create a new carriage (`newNode`), set its contents (`data`), and then hook it up in front of the existing first carriage.
+- After that, we make sure our new carriage is now considered the first one in the train.
+
+**deleteFirst Method:**
+- `deleteFirst` is like taking the first carriage away from the front of the train.
+- We remember which one is first (`temp`), then unhook it and let the train know that the next carriage is now the first.
+- We then return the carriage we took off so we can do something with it, like clean it or repaint it.
+
+**insertFirst Method:**
+- `insertFirst` is for adding a new carriage to the very end of the train.
+- We start at the engine and move through each carriage until we reach the last one.
+- Once we find the last carriage, we attach our new carriage behind it.
+
+**displayList Method:**
+- `displayList` is like walking along the train and showing each carriage.
+- We start with the engine and move from one carriage to the next, showing each one, until we've seen the whole train.
+
+App.java - Main
+SinglyLinkedList mylist = new SinglyLinkedList();
+mylist.insertFirst(100);
+
+
+### Notes on SinglyLinkedList Class
+
+1. **Package and Class:**
+   - Part of the `MyDatastructure.SinglyLinkedList` package.
+   - `SinglyLinkedList` is the class name.
+
+2. **Class Variables:**
+   - `first`: A reference to the first node in the list.
+   - `last`: A reference to the last node in the list (not used in the current implementation).
+
+3. **Constructor - `SinglyLinkedList()`:**
+   - Initializes an empty list. No specific actions are performed in the constructor.
+
+4. **isEmpty Method:**
+   - Checks if the list is empty.
+   - Returns `true` if `first` is `null`, indicating no nodes in the list.
+
+5. **insertFirst Method (int data):**
+   - Adds a new node at the beginning of the list.
+   - The new node is created with the given `data`.
+   - The new node's `next` reference is set to the current `first`.
+   - `first` is updated to point to this new node.
+
+6. **deleteFirst Method:**
+   - Removes the first node from the list.
+   - A temporary variable (`temp`) holds the node being removed.
+   - `first` is updated to the next node in the list.
+   - The removed node (`temp`) is returned.
+
+7. **insertLast Method (int data):**
+   - Adds a new node at the end of the list.
+   - Starts at `first` and traverses to the last node.
+   - A new node is created with the given `data`.
+   - The new node is linked to the end of the list.
+
+8. **displayList Method:**
+   - Prints the data of each node in the list.
+   - Starts from `first` and moves to the last node, displaying each node's data.
+
+---
+

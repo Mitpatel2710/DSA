@@ -1,0 +1,41 @@
+
+### CircularLinkedList Class Notes
+
+1. **Package and Class:**
+   - The class is part of the `MyDatastructure.CircularLinkedList` package.
+   - `CircularLinkedList` is the name of the class.
+
+2. **Class Variables:**
+   - `first`: A reference to the first node in the list.
+   - `last`: A reference to the last node in the list.
+
+3. **Constructor - `CircularLinkedList()`:**
+   - Initializes the list to be empty. Both `first` and `last` are set to `null`.
+
+4. **isEmpty Method:**
+   - Checks if the list is empty. Returns `true` if `first` is `null`, meaning there are no nodes in the list.
+
+5. **insertFirst Method (int data):**
+   - Adds a new node at the beginning of the list.
+   - Creates a new node with the given `data`.
+   - If the list is empty, the new node is also set as the `last` node.
+   - The new node is linked to the current `first` node.
+   - `first` is updated to this new node.
+
+6. **insertLast Method (int data):**
+   - Adds a new node at the end of the list.
+   - Creates a new node with the given `data`.
+   - If the list is empty, the new node is set as both the `first` and `last` node.
+   - If not empty, the new node is linked to the `last` node, and `last` is updated to this new node.
+
+7. **deleteFirst Method:**
+   - Removes and returns the data from the first node in the list.
+   - If there is only one node, `last` is also set to `null`.
+   - Updates `first` to the next node in the list.
+   - Returns the data of the removed node.
+
+8. **displayList Method:**
+   - Prints out the data from each node in the list, starting from `first` and moving to the last node.
+   - Uses a loop to traverse the list and display each node.
+
+---
